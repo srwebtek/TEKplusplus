@@ -11,7 +11,7 @@ __AUTHOR:__ srwebtek.
 
 __COPYRIGHT:__ TEK++ © 2023.
 
-__DEPLOYED:__ 9th July, 2023.
+__DEPLOYED:__ Hopefully soon
 
 __WEBSITE URL:__ [__https://www.tekplusplus.com__][WebsiteURL]
 

@@ -2,6 +2,8 @@
   scroll-behavior: smooth;
 }
 
+ol li {padding-left: 1rem;}
+
 .commonNavbar {
   width: 100%;
   background-color: black;

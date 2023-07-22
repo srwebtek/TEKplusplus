@@ -97,13 +97,13 @@
       ]
     },
     {
-      "link": "../subpages/sitemap.html",
+      "link": "../pages/sitemap.html",
       "title": "sitemap.xml",
       "svg": "assets/SVG/code.svg",
       "altText": "Brackets Icon representing a sitemap",
       "pages": [
         {
-          "link": "../subpages/sitemap.html#sitemapFAQ",
+          "link": "../pages/sitemap.html#sitemapFAQ",
           "title": "FAQ"
         }
       ]
@@ -145,31 +145,31 @@
 
   "policies": [
     {
-      "link": "../pages/about.html",
+      "link": "../resource/about.html",
       "title": "About",
       "svg": "../assets/SVG/about.svg",
       "altText": "About Icon"
     },
     {
-      "link": "../pages/privacy.html",
+      "link": "../resource/privacy.html",
       "title": "Privacy",
       "svg": "../assets/SVG/privacy.svg",
       "altText": "Privacy Policy Icon"
     },
     {
-      "link": "../pages/disclaimer.html",
+      "link": "../resource/disclaimer.html",
       "title": "Disclaimer",
       "svg": "../assets/SVG/privacy.svg",
       "altText": "Disclaimer Policy Icon"
     },
     {
-      "link": "../pages/community.html",
+      "link": "../resource/community.html",
       "title": "Community",
       "svg": "../assets/SVG/community.svg",
       "altText": "Community Support Icon"
     },
     {
-      "link": "../pages/sitemap.html",
+      "link": "../resource/sitemap.html",
       "title": "SiteMap",
       "svg": "../assets/SVG/sitemap.svg",
       "altText": "Sitemap Icon"

@@ -1,0 +1,178 @@
+{
+  "main": [
+    {
+      "link": "#",
+      "title": "HTML",
+      "svg": "assets/SVG/html5.svg",
+      "altText": "HTML Logo SVG",
+      "pages": [
+        {
+          "link": "#",
+          "title": "page 1"
+        },
+        {
+          "link": "#",
+          "title": "page 2"
+        },
+        {
+          "link": "#",
+          "title": "page 3"
+        },
+        {
+          "link": "#",
+          "title": "page 4"
+        }
+      ]
+    },
+    {
+      "link": "#",
+      "title": "CSS",
+      "svg": "assets/SVG/css3.svg",
+      "altText": "CSS3 logo SVG",
+      "pages": [
+        {
+          "link": "#",
+          "title": "Page 1"
+        }
+      ]
+    },
+    {
+      "link": "#",
+      "title": "Markdown",
+      "svg": "assets/SVG/markdown.svg",
+      "altText": "CSS3 logo SVG",
+      "pages": [
+        {
+          "link": "#",
+          "title": "Page 1"
+        }
+      ]
+    },
+    {
+      "link": "#",
+      "title": "JavaScript",
+      "svg": "assets/SVG/javascript.svg",
+      "altText": "Javascript Logo SVG",
+      "pages": [
+        {
+          "link": "#",
+          "title": "Page 1"
+        }
+      ]
+    },
+    {
+      "link": "#",
+      "title": "JSON",
+      "svg": "assets/SVG/json.svg",
+      "altText": "JSON logo SVG",
+      "pages": [
+        {
+          "link": "#",
+          "title": "Page 1"
+        }
+      ]
+    },
+    {
+      "link": "#",
+      "title": "SVG",
+      "svg": "assets/SVG/svg.svg",
+      "altText": "SVG logo SVG",
+      "pages": [
+        {
+          "link": "#",
+          "title": "Page 1"
+        }
+      ]
+    },
+    {
+      "link": "#",
+      "title": ".htaccess",
+      "svg": "assets/SVG/lan.svg",
+      "altText": "LAN icon representing an .htaccess Logo",
+      "pages": [
+        {
+          "link": "#",
+          "title": "Page 1"
+        }
+      ]
+    },
+    {
+      "link": "../subpages/sitemap.html",
+      "title": "sitemap.xml",
+      "svg": "assets/SVG/code.svg",
+      "altText": "Brackets Icon representing a sitemap",
+      "pages": [
+        {
+          "link": "../subpages/sitemap.html#sitemapFAQ",
+          "title": "FAQ"
+        }
+      ]
+    },
+    {
+      "link": "#",
+      "title": "SEO",
+      "svg": "assets/SVG/queryStats.svg",
+      "altText": "Magnifying glass and graph representing SEO",
+      "pages": [
+        {
+          "link": "#",
+          "title": "Page 1"
+        }
+      ]
+    }
+  ],
+
+  "social": [
+    {
+      "link": "#",
+      "title": "YouTube",
+      "svg": "../assets/SVG/youtube.svg",
+      "altText": "HTML Logo SVG"
+    },
+    {
+      "link": "#",
+      "title": "Twitter",
+      "svg": "../assets/SVG/twitter.svg",
+      "altText": "CSS3 logo SVG"
+    },
+    {
+      "link": "#",
+      "title": "GitHub",
+      "svg": "../assets/SVG/github.svg",
+      "altText": "CSS3 logo SVG"
+    }
+  ],
+
+  "policies": [
+    {
+      "link": "../pages/about.html",
+      "title": "About",
+      "svg": "../assets/SVG/about.svg",
+      "altText": "About Icon"
+    },
+    {
+      "link": "../pages/privacy.html",
+      "title": "Privacy",
+      "svg": "../assets/SVG/privacy.svg",
+      "altText": "Privacy Policy Icon"
+    },
+    {
+      "link": "../pages/disclaimer.html",
+      "title": "Disclaimer",
+      "svg": "../assets/SVG/privacy.svg",
+      "altText": "Disclaimer Policy Icon"
+    },
+    {
+      "link": "../pages/community.html",
+      "title": "Community",
+      "svg": "../assets/SVG/community.svg",
+      "altText": "Community Support Icon"
+    },
+    {
+      "link": "../pages/sitemap.html",
+      "title": "SiteMap",
+      "svg": "../assets/SVG/sitemap.svg",
+      "altText": "Sitemap Icon"
+    }
+  ]
+}

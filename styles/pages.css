@@ -1,0 +1,98 @@
+* {
+  scroll-behavior: smooth;
+}
+
+.commonNavbar {
+  width: 100%;
+  background-color: black;
+  padding: 1rem;
+}
+.commonNavbar a {
+  color: white;
+  font-family: SpecialElite;
+  font-size: 2rem;
+}
+
+.privacyPolicy,
+.disclaimerPage,
+.sitemapPage,
+.page {
+  min-height: 100vh;
+  padding-top: 3rem;
+  padding-right: 5%;
+  padding-bottom: 5rem;
+  padding-left: 5%;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.privacyPolicy h2,
+.disclaimerPage h2,
+.sitemapPage h2,
+.page h1 {
+  color: var(--color4);
+  font-family: RobotoBold;
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+.page h2 {
+  color: var(--color4);
+  font-family: RobotoBold;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+}
+
+.privacyPolicy h3,
+.disclaimerPage h3,
+.sitemapPage h3,
+.page h3 {
+  color: white;
+  font-family: RobotoBold;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.privacyPolicy p,
+.disclaimerPage p,
+.sitemapPage p,
+.page p {
+  color: black;
+  font-family: RobotoRegular;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  padding-top: 0.5rem;
+}
+
+article a {
+  color : var(--color4);
+}
+article a:hover {
+  color: white;
+}
+
+
+textarea {
+  font-family: monospace, "courier new";
+  color: black;
+  background-color: #e8e8e8;
+  width: calc(1300px);
+  padding-right: 10%;
+  border: solid 2px var(--color4);
+}
+.copyBar {
+  display: flex;
+  justify-content: start;
+}
+.copyBar p {
+  background-color: var(--color4);
+  color: var(--color2);
+  padding: 0.5rem 1rem;
+  border-bottom-right-radius: 20px;
+}
+
+
+
+
+

@@ -1,0 +1,159 @@
+.hero__container {
+  background-color: var(--color1);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+}
+
+
+
+/* Responsive fonts on landing page */
+.hero__wrapper h1 {
+  color: var(--color2);
+  font-size: 15rem;
+  font-family: "SpecialElite";
+}
+.hero__wrapper p {
+  color: var(--color3);
+  font-size: 9rem;
+  font-family: "RobotoRegular";
+}
+.hero__wrapper span {
+  color: var(--color4);
+  font-family: "RobotoRegular";
+}
+@media screen and (max-width: 3000px) {
+  .hero__wrapper h1 {
+    font-size: 12rem;
+  }
+  .hero__wrapper p {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (max-width: 2200px) {
+  .hero__wrapper h1 {
+    font-size: 10rem;
+  }
+  .hero__wrapper p {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .hero__wrapper h1 {
+    font-size: 8rem;
+  }
+  .hero__wrapper p {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero__wrapper {
+    margin-left: 10%;
+  }
+  .hero__wrapper h1 {
+    font-size: 5rem;
+  }
+  .hero__wrapper p {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero__wrapper {
+    margin-left: 10%;
+  }
+  .hero__wrapper h1 {
+    font-size: 5rem;
+  }
+  .hero__wrapper p {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hero__wrapper {
+    margin: auto;
+  }
+  .hero__wrapper h1 {
+    font-size: 3rem;
+  }
+  .hero__wrapper p {
+    display: none;
+  }
+}
+
+#cursor {
+  animation: blink 0.8s linear infinite;
+}
+@keyframes blink {
+  100% {
+    opacity: 100%;
+  }
+  80% {
+    opacity: 100%;
+  }
+  60% {
+    opacity: 0%;
+  }
+  40% {
+    opacity: 0%;
+  }
+  20% {
+    opacity: 100%;
+  }
+  0% {
+    opacity: 100%;
+  }
+}
+
+/* Main navigation section of home page */
+
+nav div {
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  max-width: 1500px;
+  gap: 5px;
+  background-color: var(--color1);
+  margin-bottom: 10rem;
+}
+nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color2);
+}
+
+@media screen and (min-width: 445px) {
+  nav a:hover > img {
+    display: none;
+  }
+  nav a:hover {
+    justify-content: center;
+  }
+  nav a:hover > h3 {
+    color: var(--color3);
+    font-family: "SpecialElite";
+  }
+}
+nav h3 {
+  font-family: "RobotoRegular";
+  font-size: 2rem;
+  color: var(--color4);
+  padding-top: 1rem;
+}
+nav img {
+  width: 30%;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}

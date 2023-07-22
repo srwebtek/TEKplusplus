@@ -103,6 +103,18 @@
       "altText": "Brackets Icon representing a sitemap",
       "pages": [
         {
+          "link": "../pages/sitemap.html#sitemap_minimal",
+          "title": "Sitemap: Minimal"
+        },
+        {
+          "link": "../pages/sitemap.html#sitemap_detailed",
+          "title": "Sitemap: Detailed"
+        },
+        {
+          "link": "../pages/sitemap.html#sitemap_detailed_with_images_and_video",
+          "title": "Sitemap: Detailed with images"
+        },
+        {
           "link": "../pages/sitemap.html#sitemapFAQ",
           "title": "FAQ"
         }

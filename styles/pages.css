@@ -2,7 +2,9 @@
   scroll-behavior: smooth;
 }
 
-ol li {padding-left: 1rem;}
+ol li {
+  padding-left: 1rem;
+}
 
 .commonNavbar {
   width: 100%;
@@ -52,8 +54,8 @@ ol li {padding-left: 1rem;}
   color: white;
   font-family: RobotoBold;
   font-size: 1.5rem;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .privacyPolicy p,
@@ -67,12 +69,6 @@ ol li {padding-left: 1rem;}
   padding-top: 0.5rem;
 }
 
-article a {
-  color : var(--color4);
-}
-article a:hover {
-  color: white;
-}
 
 
 textarea {
@@ -94,15 +90,33 @@ textarea {
   border-bottom-right-radius: 20px;
 }
 
+#sitemapFAQ h3 {
+  width: fit-content;
+  cursor: pointer;
+  text-transform: capitalize;
+  display: flex;
+}
+
+#sitemapFAQ h3 img {
+  transform: translateX(-0.8rem);
+  width: 2rem;
+}
 
 
-.flex{
+.sitemapFAQ a {
+  color: var(--color4);
+}
+.sitemapFAQ a:hover {
+  color: white;
+}
+
+.flex {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1rem;
 }
-.flex img{
+.flex img {
   height: 400px;
   width: 40vw;
   object-fit: cover;
@@ -110,16 +124,13 @@ textarea {
 }
 
 @media screen and (max-width: 800px) {
-  .flex{
+  .flex {
     flex-direction: column;
   }
-  .flex img{
+  .flex img {
     height: 100px;
     width: 90vw;
     object-fit: cover;
     object-position: center;
-    
   }
 }
-
-

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEK++ | htaccess Guide</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/pages.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <script defer src="../js/copyToClipboard.js"></script>
+    <script defer src="../js/footer.js"></script>
+  </head>
+  <body>
+    <div class="commonNavbar">
+      <a href="../index.html">TEK++</a>
+    </div>
+    <main class="page">
+      <section>
+        <h1>Guide to .htaccess</h1>
+        <h3>What is .htaccess ?</h3>
+        <p>
+          <span>.htaccess</span> is a configuration file used on web servers. It
+          allows you to override server settings for specific directories or
+          files without modifying the main server configuration. The file is
+          plain text and usually hidden on Unix-based systems.
+        </p>
+        <p>
+          Common uses include URL rewriting for user-friendly URLs, setting up
+          redirects, access control based on IP addresses, and custom error
+          pages. However, use it carefully as mistakes can cause issues.
+        </p>
+        <p>
+          You can find out more in the <a href="#htaccessFAQ">FAQ section</a> of
+          this page
+        </p>
+      </section>
+
+      <!-- ------------------------- -->
+      <!-- TEXTBOX one -->
+      <!-- ------------------------- -->
+      <article>
+        <h3 id="404_page_redirect">Snippet of a 404 Redirect</h3>
+        <p>
+          Below is an example of how to set up a 404 redirect using .htaccess
+          when the custom error page named errorpage.html is in the root
+          directory:
+        </p>
+        <p>
+          With this configuration, whenever a user encounters a 404 Not Found
+          error on your website, the server will display the custom error page
+          located at /errorpage.html. Ensure that the file errorpage.html is
+          indeed placed in the root directory of your website for this to work
+          correctly. This allows you to provide a personalized and informative
+          page to visitors when they come across non-existent or broken URLs on
+          your site.
+        </p>
+        <textarea id="contentBox1" rows="3">
+
+    ErrorDocument 404 /errorpage.html
+  
+      </textarea
+        >
+        <div class="copyBar">
+          <p onclick="copyMe(contentBox1)">Copy to Clipboard</p>
+        </div>
+      </article>
+
+      <!-- ------------------------- -->
+      <!-- TEXTBOX two -->
+      <!-- ------------------------- -->
+      <article>
+        <h3 id="remove_html_extension">Snippet for Removing .html Extension</h3>
+        <p>
+          Removing the .html extension from URLs on a website can create cleaner
+          and more user-friendly URLs. It enhances the readability and
+          aesthetics of the website's links, making them easier for visitors to
+          remember and share. Additionally, shorter URLs can have a positive
+          impact on search engine optimization (SEO) by potentially improving
+          the website's ranking in search results.
+        </p>
+        <p>
+          With this configuration, URLs like example.com/about.html will be
+          accessible with example.com/about. The rule checks if the requested
+          URL without the .html extension exists as a file, and if so, it issues
+          a 301 permanent redirect to the URL without the extension, effectively
+          removing it from the user-visible URL.
+        </p>
+        <textarea id="contentBox2" rows="6">
+
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.*)\.html$ /$1 [L,R=301]
+  
+  </textarea
+        >
+        <div class="copyBar">
+          <p onclick="copyMe(contentBox2)">Copy to Clipboard</p>
+        </div>
+      </article>
+
+      <!-- ------------------------- -->
+      <!-- TEXTBOX three -->
+      <!-- ------------------------- -->
+      <article>
+        <h3 id="301_page_redirect">
+          Snippet of a 301 Page Redirect
+        </h3>
+        <p>
+          Redirecting a file on a website is necessary when you change the
+          file's location or name, ensuring visitors land on the correct page.
+          It also helps maintain SEO rankings and prevents broken links,
+          providing a seamless user experience.
+        </p>
+        <p>
+          To redirect oldpage.html to newpage.html using .htaccess, you can use
+          the rule below.
+        </p>
+        <p>
+          With this configuration, when a user tries to access
+          example.com/oldpage.html, they will be automatically redirected to
+          example.com/newpage.html. The 301 status code indicates a permanent
+          redirect, which is useful for search engines to update their indexes
+          with the new URL.
+        </p>
+
+        <textarea id="contentBox3" rows="3">
+
+    Redirect 301 /oldpage.html /newpage.html
+        </textarea>
+
+        <div class="copyBar">
+          <p onclick="copyMe(contentBox3)">Copy to Clipboard</p>
+        </div>
+      </article>
+
+
+
+
+
+      <h3 id="redirect_HTTP_to_HTTPS">
+        Snippet of Redirect HTTP to HTTPS
+      </h3>
+      <p>Redirecting HTTP to HTTPS is essential for security and data protection. HTTPS encrypts the data exchanged between a website and its users, preventing eavesdropping and ensuring a secure connection. It also improves trustworthiness and SEO rankings, as search engines favor secure websites.</p>
+      <p>
+        Redirecting a file on a website is necessary when you change the
+        file's location or name, ensuring visitors land on the correct page.
+        It also helps maintain SEO rankings and prevents broken links,
+        providing a seamless user experience.
+      </p>
+      <p>
+        This rule checks if the request is using HTTP (RewriteCond %{HTTPS} off) and redirects it to the corresponding HTTPS version (https://%{HTTP_HOST}%{REQUEST_URI}). The [R=301] flag indicates a permanent redirect, and the [L] flag stops processing other rules if this one matches. Remember to save the changes to the .htaccess file and upload it to the root directory of your website for the redirect to take effect.
+      </p>
+      <p>
+        To redirect HTTP to HTTPS using .htaccess, you can use the following rule:
+      </p>
+
+      <textarea id="contentBox4" rows="5">
+
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+      </textarea>
+
+      <div class="copyBar">
+        <p onclick="copyMe(contentBox4)">Copy to Clipboard</p>
+      </div>
+    </article>
+
+
+      <section id="htaccessFAQ" class="htaccessFAQ">
+        <h2>FAQ</h2>
+
+        <h3 onclick="toggleView('section1')">
+          <img
+            src="../assets/SVG/expandMore.svg"
+            alt="Carrot expand / collapse" />What is .htaccess File Used for ?
+        </h3>
+        <article id="section1" style="display: none">
+          <p>
+            The .htaccess file is a powerful configuration file used on web
+            servers running Apache HTTP Server software. Its primary purpose is
+            to provide per-directory or per-file-based configuration, allowing
+            website administrators to override default server settings without
+            modifying the main server configuration file (httpd.conf). This
+            flexibility makes it useful, especially in shared hosting
+            environments where users have limited access to server
+            configurations.
+          </p>
+          <div class="flex">
+            <div>
+              <ol>
+                <li>
+                  <p>
+                    1. URL Rewriting and Redirection: One of the most common
+                    uses of .htaccess is to rewrite URLs and set up redirects.
+                    This enables website owners to create user-friendly and
+                    SEO-friendly URLs or redirect old URLs to new ones. For
+                    example, you can convert example.com/product.php?id=123 into
+                    example.com/product/123/, making it more readable and search
+                    engine-friendly.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    2. Access Control: .htaccess allows administrators to
+                    control access to specific directories or files based on
+                    various criteria, such as IP addresses, user authentication,
+                    or specific HTTP headers. This feature is valuable for
+                    restricting access to sensitive areas of a website or
+                    protecting files from unauthorized access.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    3. Custom Error Pages: Website owners can define custom
+                    error pages using .htaccess. When a visitor encounters an
+                    error, such as a 404 Page Not Found, the server displays a
+                    custom-designed error page instead of the default one. This
+                    helps maintain a consistent branding and user experience
+                    across the site.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    4. MIME Type and File Handling: .htaccess can be used to
+                    specify how the server handles different file types. This
+                    includes setting appropriate MIME types for files, which
+                    informs the browser how to handle specific file formats.
+                    Proper MIME types are essential for ensuring correct
+                    rendering of files, such as images, videos, or downloadable
+                    content.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    5. Caching and Compression: Using .htaccess, administrators
+                    can control caching settings and enable compression for
+                    files served by the server. Caching reduces server load and
+                    improves website performance, while compression reduces the
+                    size of files transmitted over the network, leading to
+                    faster loading times for visitors.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    6. Security Enhancements: Various security-related
+                    configurations can be implemented through .htaccess, such as
+                    preventing directory browsing, blocking specific IP
+                    addresses or user agents known for malicious activities, and
+                    enabling SSL/TLS for secure connections.
+                  </p>
+                </li>
+              </ol>
+            </div>
+            <img src="../assets/Images/sitemap.png" alt="sitemap" />
+          </div>
+        </article>
+        <h3 onclick="toggleView('section2')">
+          <img
+            src="../assets/SVG/expandMore.svg"
+            alt="Carrot expand / collapse" />Is .htaccess Necessary ?
+        </h3>
+        <article id="section2" style="display: none">
+          <p>
+            The .htaccess file is not always necessary for every website, but it
+            can be highly beneficial in certain scenarios. Its main purpose is
+            to allow directory-level configurations, enabling users to override
+            default server settings without altering the main server
+            configuration file.
+          </p>
+          <p>
+            The necessity of using .htaccess depends on the web hosting
+            environment and the level of control granted to the user. In shared
+            hosting setups, where users often lack access to the main server
+            configuration, .htaccess becomes crucial for making important
+            customizations.
+          </p>
+          <p>
+            However, in cases of dedicated server hosting or when the required
+            functionalities can be achieved through server-level configurations,
+            the use of .htaccess may be optional.
+          </p>
+          <p>
+            The advantages of .htaccess include URL rewriting, access control,
+            custom error pages, MIME type handling, caching, compression, and
+            security enhancements. Its versatility makes it a valuable tool for
+            web developers and administrators seeking fine-grained control over
+            their websites.
+          </p>
+          <p>
+            Ultimately, whether .htaccess is necessary depends on the specific
+            requirements and constraints of the website's hosting environment.
+          </p>
+        </article>
+
+        <h3 onclick="toggleView('section3')">
+          <img
+            src="../assets/SVG/expandMore.svg"
+            alt="Carrot expand / collapse" />Where Should I Create the .htaccess
+          File?
+        </h3>
+        <article id="section3" style="display: none">
+          <p>
+            The <code>.htaccess</code> file should be created in the directory
+            where you want its configurations to take effect. If you want
+            specific settings to apply to a particular folder or file, place the
+            <code>.htaccess</code> file inside that directory. Alternatively, if
+            you want its configurations to affect the entire website, you can
+            place it in the root directory of your website.
+          </p>
+          <p>
+            It's essential to note that the <code>.htaccess</code> file's
+            effects are recursive, meaning that the configurations in a parent
+            directory will also apply to all the subdirectories unless
+            overridden by a new <code>.htaccess</code> file in a subdirectory.
+          </p>
+          <p>
+            Always ensure that you name the file correctly as
+            <code>.htaccess</code> (with a leading dot) and that it's saved as
+            plain text. Additionally, be cautious when editing the file, as
+            incorrect configurations could lead to issues with your website.
+            Make a backup of the original file before making any changes.
+          </p>
+        </article>
+
+        <h3 onclick="toggleView('section4')">
+          <img
+            src="../assets/SVG/expandMore.svg"
+            alt="Carrot expand / collapse" />How do I Manually Create a
+          .htaccess File ?
+        </h3>
+        <article id="section4" style="display: none">
+          <p>
+            Creating a <code>.htaccess</code> file manually is a straightforward
+            process. First, open a text editor (e.g., Notepad on Windows or
+            TextEdit on Mac) and create a new file.
+          </p>
+          <p>
+            Next, add your desired configurations to the file, each on a new
+            line. Save the file as <code>.htaccess</code> (with the leading dot)
+            and ensure it's saved as plain text (not a rich text format).
+          </p>
+          <p>
+            Before uploading the file to your website's server, ensure that you
+            place it in the correct directory. If you want its configurations to
+            apply to a specific folder or file, upload it to that directory. To
+            affect the entire website, upload it to the root directory.
+          </p>
+          <p>
+            After uploading, verify that the file's permissions are set
+            correctly to allow the web server to read it. You can now see the
+            changes take effect on your website, such as URL rewrites or custom
+            error pages.
+          </p>
+        </article>
+
+        <h3 onclick="toggleView('section5')">
+          <img
+            src="../assets/SVG/expandMore.svg"
+            alt="Carrot expand / collapse" />What is the Default .htaccess File
+          ?
+        </h3>
+        <article id="section5" style="display: none">
+          <p>
+            By default, most web servers do not have a pre-existing
+            <code>.htaccess</code> file in their directories. The file is
+            typically created by website administrators when they need to
+            override default server configurations or implement specific
+            settings for their site.
+          </p>
+
+          <p>
+            The absence of a default <code>.htaccess</code> file allows the
+            server to use its standard configuration, defined in the main server
+            configuration file (e.g., <code>httpd.conf</code> for Apache
+            servers). This ensures a consistent and secure environment for all
+            websites hosted on the server.
+          </p>
+
+          <p>
+            Website administrators can manually create a new
+            <code>.htaccess</code> file in any directory where they want to
+            apply custom configurations. Once the file is created and uploaded
+            to the server, it can contain various directives to modify the
+            server's behavior, such as URL rewriting, access control, or error
+            handling.
+          </p>
+
+          <p>
+            As the <code>.htaccess</code> file is specific to the Apache web
+            server, other web servers like Nginx may have different approaches
+            to handle similar configurations, and they may not use a
+            <code>.htaccess</code> file at all.
+          </p>
+        </article>
+
+        <h3 onclick="toggleView('section6')">
+          <img
+            src="../assets/SVG/expandMore.svg"
+            alt="Carrot expand / collapse" />What is the Content of the
+          .htaccess File ?
+        </h3>
+        <article id="section6" style="display: none">
+          <p>
+            For examples of .htaccess content, follow the link to examples
+            above:
+          </p>
+          <ol>
+            <li><p>
+                <a href="#404_page_redirect">Snippet of 404 page redirect</a>
+              </p></li>
+            <li><p>
+                <a href="#remove_html_extension">Snippet of removing .html extension</a>
+              </p></li>
+            <li><p>
+                <a href="#301_page_redirect">Snippet of 301 page redirect</a>
+              </p></li>
+            <li><p>
+                <a href="#redirect_HTTP_to_HTTPS">Snippet of HTTP to HTTPS redirect</a>
+              </p></li>
+          </ol>       
+        </article>
+
+        <h3 onclick="toggleView('section7')">
+          <img
+            src="../assets/SVG/expandMore.svg"
+            alt="Carrot expand / collapse" />How do I Download a .htaccess File
+          from a Website ?
+        </h3>
+        <article id="section7" style="display: none">
+          <p>
+            To download a <code>.htaccess</code> file from a website, you need
+            access to the website's server or file system. Follow these steps:
+          </p>
+          <p>
+            1. Connect to the website's server using FTP (File Transfer
+            Protocol) or SFTP (Secure File Transfer Protocol) credentials. You
+            can use an FTP client like FileZilla or use the file manager
+            provided by your web hosting control panel.
+          </p>
+          <p>
+            2. Navigate to the directory where the <code>.htaccess</code> file
+            is located. It is typically found in the root directory or in the
+            specific directory where you want its configurations to apply.
+          </p>
+          <p>
+            3. Right-click on the <code>.htaccess</code> file, and select
+            "Download" or "Download to local" from the context menu (if using an
+            FTP client). If using a web hosting control panel file manager, look
+            for a "Download" button or similar option.
+          </p>
+          <p>
+            4. Save the downloaded file to your local computer. You can choose
+            the location and name for the file as you wish.
+          </p>
+          <p>
+            Keep in mind that not all websites make their
+            <code>.htaccess</code> files publicly accessible. If you can't find
+            or access the file, the website owner may have restricted access to
+            it.
+          </p>
+        </article>
+
+        <h3 onclick="toggleView('section8')">
+          <img
+            src="../assets/SVG/expandMore.svg"
+            alt="Carrot expand / collapse" />How Do I Edit the .htaccess File ?
+        </h3>
+        <article id="section8" style="display: none">
+          <p>To edit the <code>.htaccess</code> file, follow these steps:</p>
+          <p>
+            1. Connect to your website's server using FTP or SFTP credentials.
+            You can use an FTP client like FileZilla or the file manager
+            provided by your hosting control panel.
+          </p>
+          <p>
+            2. Navigate to the directory where the <code>.htaccess</code> file
+            is located. It's usually in the root directory or in the specific
+            folder you want to modify.
+          </p>
+          <p>
+            3. Right-click on the <code>.htaccess</code> file and select "Edit"
+            (if using an FTP client). If using a control panel file manager,
+            look for an "Edit" option or open the file in a text editor.
+          </p>
+          <p>
+            4. Make the necessary changes to the file's content. After editing,
+            save the file with the changes.
+          </p>
+          <p>
+            5. Upload the edited <code>.htaccess</code> file back to the server,
+            replacing the original file if prompted.
+          </p>
+          <p>
+            Remember to back up the original file before making any changes, as
+            incorrect configurations can cause issues with your website.
+          </p>
+        </article>
+
+        <h3 onclick="toggleView('section9')">
+          <img
+            src="../assets/SVG/expandMore.svg"
+            alt="Carrot expand / collapse" />How to Redirect HTTP to HTTPS Using
+          .htaccess ?
+        </h3>
+        <article id="section9" style="display: none">
+          <p>To redirect HTTP to HTTPS using .htaccess, follow these steps:</p>
+          <p>
+            1. Connect to your website's server using FTP or SFTP credentials.
+          </p>
+          <p>
+            2. Locate or create the <code>.htaccess</code> file in the root
+            directory of your website.
+          </p>
+          <p>3. Open the <code>.htaccess</code> file in a text editor.</p>
+          <p>
+            4. Enable the rewrite engine by adding
+            <code>RewriteEngine On</code>.
+          </p>
+          <p>
+            5. Add a redirect rule to check if HTTPS is off and redirect to the
+            secure HTTPS version.
+          </p>
+          <p>
+            6. Save the changes to the <code>.htaccess</code> file and upload it
+            back to the server.
+          </p>
+          <p>
+            After these steps, your website will automatically redirect all HTTP
+            requests to the secure HTTPS version, ensuring a safe and encrypted
+            connection for your visitors.
+          </p>
+          <p>
+            <a href="#redirect_HTTP_to_HTTPS"
+              >Check out more: Snippet of HTTP to HTTPS redirect</a
+            >
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer id="footerDynamic"></footer>
+  </body>
+
+  <script>
+    function toggleView(data) {
+      const toggle = document.getElementById(data);
+      if (toggle.style.display == "none") {
+        toggle.style.display = "block";
+      } else {
+        toggle.style.display = "none";
+      }
+    }
+  </script>
+</html>

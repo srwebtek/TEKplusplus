@@ -6,6 +6,10 @@ ol li {
   padding-left: 1rem;
 }
 
+a{
+  color: var(--color4);
+}
+
 .commonNavbar {
   width: 100%;
   background-color: black;

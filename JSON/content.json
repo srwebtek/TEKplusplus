@@ -85,14 +85,30 @@
       ]
     },
     {
-      "link": "#",
+      "link": "../pages/htaccess.html",
       "title": ".htaccess",
       "svg": "assets/SVG/lan.svg",
       "altText": "LAN icon representing an .htaccess Logo",
       "pages": [
         {
-          "link": "#",
-          "title": "Page 1"
+          "link": "../pages/htaccess.html#404_page_redirect",
+          "title": ".htaccess: 404 Page Redirect"
+        },
+        {
+          "link": "../pages/htaccess.html#remove_html_extension",
+          "title": ".htaccess: Remove .html Extension"
+        },
+        {
+          "link": "../pages/htaccess.html#301_page_redirect",
+          "title": ".htaccess: 301 Page Redirect"
+        },
+        {
+          "link": "../pages/htaccess.html#redirect_HTTP_to_HTTPS",
+          "title": ".htaccess: Redirect HTTP to HTTPS"
+        },
+        {
+          "link": "../pages/htaccess.html#htaccessFAQ",
+          "title": "FAQ"
         }
       ]
     },

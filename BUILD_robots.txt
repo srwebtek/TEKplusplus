@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://www.tekplusplus.com/sitemap.xml

@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
    <url>
-      <loc>https://www.tekx7.com/</loc>
+      <loc>https://www.tekplusplus.com/</loc>
       <lastmod>2021-05-07</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.tekx7.com/contact.html</loc>
+      <loc>https://www.tekplusplus.com/contact.html</loc>
       <lastmod>2021-04-16</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.1</priority>
    </url>
    <url>
-      <loc>https://www.tekx7.com/disclaimer.html</loc>
+      <loc>https://www.tekplusplus.com/disclaimer.html</loc>
       <lastmod>2021-04-16</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.1</priority>
    </url>
    <url>
-      <loc>https://www.tekx7.com/privacy-policy.html</loc>
+      <loc>https://www.tekplusplus.com/privacy-policy.html</loc>
       <lastmod>2021-04-16</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.1</priority>
    </url>
    <url>
-      <loc>https://www.tekx7.com/link-javascript-in-headtags.html</loc>
+      <loc>https://www.tekplusplus.com/link-javascript-in-headtags.html</loc>
       <lastmod>2021-04-16</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
       <image:image>
-         <image:loc>https://www.htmlheadtags.com/img/link-javascript-in-headtags.png</image:loc>
+         <image:loc>https://www.tekplusplus.com/img/link-javascript-in-headtags.png</image:loc>
          <image:title>How to Link to an External Javascript File.</image:title>
          <image:caption>How to link to an external javascript file from headtags inside an HTML webpage.</image:caption>
       </image:image>
    </url>
    <url>
-      <loc>https://www.tekx7.com/link-stylesheet-in-headtags.html</loc>
+      <loc>https://www.tekplusplus.com/link-stylesheet-in-headtags.html</loc>
       <lastmod>2021-04-16</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
       <image:image>
-         <image:loc>https://www.htmlheadtags.com/img/link-stylesheet-in-headtags.png</image:loc>
+         <image:loc>https://www.tekplusplus.com/img/link-stylesheet-in-headtags.png</image:loc>
          <image:title>How to Link to an External Stylesheet.</image:title>
          <image:caption>How to link to an external stylesheet from headtags inside an HTML webpage.</image:caption>
       </image:image>

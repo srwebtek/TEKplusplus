@@ -1,12 +1,14 @@
 {
     "cSpell.ignoreWords": [
-        "authorised",
-        "srwebtek",
-        "utilises"
+        "srwebtek"
+        
     ],
     "cSpell.words": [
         "Optimisation",
+        "Optimise",
         "tekplusplus",
-        "urlset"
+        "urlset",
+        "utilises",
+        "authorised"
     ]
 }

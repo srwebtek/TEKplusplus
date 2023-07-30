@@ -79,13 +79,16 @@ textarea {
   font-family: monospace, "courier new";
   color: black;
   background-color: #e8e8e8;
-  width: calc(1300px);
-  padding-right: 10%;
+  width: 100%;
+  max-width: calc(1500px);
+  /* padding-right: 10%; */
   border: solid 2px var(--color4);
+  margin-top: 1rem;
 }
 .copyBar {
   display: flex;
   justify-content: start;
+  margin-bottom: 4rem;
 }
 .copyBar p {
   background-color: var(--color4);

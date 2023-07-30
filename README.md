@@ -11,13 +11,13 @@ __AUTHOR:__ srwebtek.
 
 __COPYRIGHT:__ TEK++ © 2023.
 
-__DEPLOYED:__ Hopefully soon
+__DEPLOYED:__ July 2023 (Cloudflare)
 
 __WEBSITE URL:__ [__https://www.tekplusplus.com__][WebsiteURL]
 
 __VERSION:__ v1.0
 
-__UPDATED:__ 09JUL23
+__UPDATED:__ 30JUL23
 
 ---
 
@@ -58,8 +58,8 @@ Contents included in repositories are shared public in the hope that it will be 
 
 
 
-[WebsiteURL]: https://tekplusplus.com "TEKx7"
+[WebsiteURL]: https://tekplusplus.com "TEK++"
 
 [YouTube]: https://www.youtube.com/ "YouTube - TEK++"
-[Twitter]: https://twitter.com/ "Twitter - TEK++"
+[Twitter]: https://twitter.com/srwebtek/ "Twitter - TEK++"
 [GitHub]: https://github.com/srwebtek/tekplusplus "GitHub - TEK++"

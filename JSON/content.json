@@ -53,14 +53,38 @@
       ]
     },
     {
-      "link": "#",
+      "link": "../pages/seo.html",
       "title": "SEO",
       "svg": "assets/SVG/queryStats.svg",
       "altText": "Magnifying glass and graph representing SEO",
       "pages": [
         {
-          "link": "#",
-          "title": "Page 1"
+          "link": "../pages/seo.html#MinifyJS",
+          "title": "Minify JavaScript for Performance"
+        },
+        {
+          "link": "../pages/seo.html#minifyCSS",
+          "title": "Minify CSS for Performance"
+        },
+        {
+          "link": "../pages/seo.html#imageCompression",
+          "title": "Image Compression Tools"
+        },
+        {
+          "link": "../pages/seo.html#googlePageSpeed",
+          "title": "Google PageSpeed Insights"
+        },
+        {
+          "link": "../pages/seo.html#optimiseMetaData",
+          "title": "Optimise Meta Descriptions"
+        },
+        {
+          "link": "../pages/seo.html#seoRobotsTXT",
+          "title": "Enhancing SEO with Robots.txt"
+        },
+        {
+          "link": "../pages/seo.html#seoFAQ",
+          "title": "FAQ"
         }
       ]
     }
